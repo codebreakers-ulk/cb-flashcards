@@ -10,11 +10,15 @@ Built with vanilla HTML, CSS, and JavaScript. Data persists directly in the brow
 
 No installation or server setup required.
 
-1. Fork and clone this repository:
-   git clone https://github.com/<your-username>/cb-flashcard-vault.git
-   cd cb-flashcard-vault
+1. Fork this repository on GitHub.
 
-2. Open index.html in your browser:
+2. Clone your fork:
+   ```bash
+   git clone https://github.com/<your-username>/cb-flashcards.git
+   cd cb-flashcards
+   ```
+
+3. Open index.html in your browser:
    Double-click index.html or open it with your preferred browser.
 
 ---
