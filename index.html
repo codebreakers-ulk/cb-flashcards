@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Vault | Codebreakers</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1>Flashcard Vault</h1>
+      <p class="subtitle">Master tech terms and concepts with simple spaced practice.</p>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    
+    <!-- Top Action Bar -->
+    <div class="deck-controls">
+      <span id="cardProgress" class="card-progress">Card 1 of 1</span>
+      <button id="toggleFormBtn" class="btn btn-secondary">+ Add New Card</button>
+    </div>
+
+    <!-- Hidden by default: Add Card Form -->
+    <section id="cardFormContainer" class="card-form-container hidden">
+      <form id="newCardForm" class="card-form">
+        <h3>Create New Flashcard</h3>
+        <div class="form-group">
+          <label for="cardTopic">Topic / Category</label>
+          <input type="text" id="cardTopic" placeholder="e.g. Git, JavaScript, Web" required>
+        </div>
+        <div class="form-group">
+          <label for="cardQuestion">Question / Term</label>
+          <textarea id="cardQuestion" rows="2" placeholder="What does git status do?" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="cardAnswer">Answer / Definition</label>
+          <textarea id="cardAnswer" rows="3" placeholder="Displays working directory and staging area state." required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Save to Vault</button>
+          <button type="button" id="cancelFormBtn" class="btn btn-outline">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- The Interactive Flashcard -->
+    <section class="card-stage">
+      <div id="flashcard" class="flashcard">
+        <div class="card-topic" id="displayTopic">Topic</div>
+        <div class="card-body">
+          <p class="card-text" id="displayContent">Question appears here</p>
+        </div>
+        <div class="card-hint" id="cardHint">Click card to reveal answer</div>
+      </div>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <nav class="nav-controls">
+      <button id="prevBtn" class="btn btn-outline">&larr; Previous</button>
+      <button id="flipBtn" class="btn btn-primary">Flip Card</button>
+      <button id="nextBtn" class="btn btn-outline">Next &rarr;</button>
+    </nav>
+
+    <!-- Delete Card Trigger -->
+    <div class="danger-zone">
+      <button id="deleteCardBtn" class="btn-text-danger">Delete This Card</button>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built with Vanilla JS & LocalStorage &bull; Maintained by <strong>Codebreakers</strong></p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
